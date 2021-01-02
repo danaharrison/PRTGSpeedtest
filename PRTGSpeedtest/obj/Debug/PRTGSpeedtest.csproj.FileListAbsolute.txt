@@ -24,3 +24,6 @@ D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.Text.Json.xml
 D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.ValueTuple.xml
 D:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csproj.CopyComplete
+D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\Json.Net.dll
+D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\Newtonsoft.Json.dll
+D:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\Newtonsoft.Json.xml

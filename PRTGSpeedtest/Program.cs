@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace PRTGSpeedtest
 {
@@ -46,6 +48,24 @@ namespace PRTGSpeedtest
                     text = "Sample Text"
                 }
             };
+
+            string[] piHoles = ConfigurationSettings.AppSettings["PiHoles"].Split('|');
+            int dnsQueries = 0, adsBlocked = 0;
+
+            foreach( var pi in piHoles )
+            {
+                using (var c = new HttpClient())
+                {
+                    var r = c.GetAsync("http://" + pi + "/admin/api.php").Result.Content.ReadAsStringAsync().Result;
+                    dynamic rJson = JObject.Parse(r);
+
+                    dnsQueries += rJson.dns_queries_today.Value;
+                    adsBlocked += rJson.ads_blocked_today.Value;
+                }                
+            }
+
+            prtgResultList.Add(new PrtgResult { channel = "PiHole Queries", value = dnsQueries.ToString() });
+            prtgResultList.Add(new PrtgResult { channel = "Ads Blocked", value = adsBlocked.ToString() });
 
             Console.Write(JsonSerializer.Serialize(jsonResult));
         }        

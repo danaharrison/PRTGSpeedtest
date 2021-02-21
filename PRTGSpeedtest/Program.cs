@@ -45,7 +45,7 @@ namespace PRTGSpeedtest
                 prtg = new Prtg
                 {
                     result = prtgResultList,
-                    text = "Sample Text"
+                    text = ""
                 }
             };
 

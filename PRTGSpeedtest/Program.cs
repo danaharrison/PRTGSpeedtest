@@ -54,14 +54,21 @@ namespace PRTGSpeedtest
 
             foreach( var pi in piHoles )
             {
-                using (var c = new HttpClient())
+                try
                 {
-                    var r = c.GetAsync("http://" + pi + "/admin/api.php").Result.Content.ReadAsStringAsync().Result;
-                    dynamic rJson = JObject.Parse(r);
+                    using (var c = new HttpClient())
+                    {
+                        var r = c.GetAsync("http://" + pi + "/admin/api.php").Result.Content.ReadAsStringAsync().Result;
+                        dynamic rJson = JObject.Parse(r);
 
-                    dnsQueries += rJson.dns_queries_today.Value;
-                    adsBlocked += rJson.ads_blocked_today.Value;
-                }                
+                        dnsQueries += rJson.dns_queries_today.Value;
+                        adsBlocked += rJson.ads_blocked_today.Value;
+                    }
+                }
+                catch
+                {
+
+                }
             }
 
             prtgResultList.Add(new PrtgResult { channel = "PiHole Queries", value = dnsQueries.ToString() });

@@ -68,7 +68,7 @@ namespace PRTGSpeedtest
                 {
                     using (var c = new HttpClient())
                     {
-                        var r = c.GetAsync("http://" + pi + "/admin/api.php").Result.Content.ReadAsStringAsync().Result;
+                        var r = c.GetAsync("http://" + pi + "/admin/api.php?summaryRaw&auth=" + ConfigurationSettings.AppSettings["PiHolesKey"]).Result.Content.ReadAsStringAsync().Result;
                         dynamic rJson = JObject.Parse(r);
 
                         dnsQueries += rJson.dns_queries_today.Value;

@@ -51,8 +51,9 @@ C:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.Text.Encodings.Web.xml
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.Text.Json.xml
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\bin\Debug\System.ValueTuple.xml
-C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csprojAssemblyReference.cache
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csproj.CoreCompileInputs.cache
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csproj.CopyComplete
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.exe
 C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.pdb
+C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csproj.AssemblyReference.cache
+C:\Code\PRTGSpeedtest\PRTGSpeedtest\obj\Debug\PRTGSpeedtest.csproj.SuggestedBindingRedirects.cache

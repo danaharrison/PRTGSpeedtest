@@ -34,21 +34,21 @@ async function main() {
             result: [
                 {
                     channel: "Download",
-                    value: speedTestResult.downloadSpeed,
+                    value: `${speedTestResult.downloadSpeed}`,
                     unit: "custom",
                     customunit: "Mbps"
                 },
                 {
                     channel: "Upload",
-                    value: speedTestResult.uploadSpeed,
+                    value: `${speedTestResult.uploadSpeed}`,
                     unit: "custom",
                     customunit: "Mbps"
                 },
                 {
                     channel: "Latency",
-                    value: speedTestResult.latency,
+                    value: `${speedTestResult.latency}`,
                     unit: "custom",
-                    customUnit: "ms"
+                    customunit: "ms"
                 },
                 {
                     channel: "PiHole Queries", 
